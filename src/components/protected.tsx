@@ -16,5 +16,8 @@ export default function Protected({ children }: Readonly<{ children: React.React
             router.push('/')
     }, [session])
 
-    return (!!session ? <>{children}</> : <></>)
+    console.log(session)
+    console.log(children)
+
+    return (!!session && <>{children}</>)
 }
